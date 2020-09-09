@@ -54,7 +54,7 @@ player = Player(room['outside'])
 #
 # If the user enters "q", quit the game.
 
-print("""===========Welcome to the Classic Adventure Game===========""")
+print("\t===========Welcome to the Classic Adventure Game===========")
 print("You are currently here:")
 
 while True:
@@ -67,5 +67,4 @@ while True:
     elif direction == 'q':
         exit('Thank you for playing')
     else:
-        print('Invalid Command')
-        print(player)
+        print('=====Invalid Command=====')

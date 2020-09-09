@@ -9,10 +9,22 @@ class Player:
 
     def new_direction(self, direction):
         if direction == 'n':
-            self.room = self.room.n_to
+            if hasattr(self.room, 'n_to'):
+                self.room = self.room.n_to
+            else:
+                print('=====Woops, you can\'t go that way=====')
         if direction == 's':
-            self.room = self.room.s_to
+            if hasattr(self.room, 's_to'):
+                self.room = self.room.s_to
+            else:
+                print('=====Woops, you can\'t go that way=====')
         if direction == 'w':
-            self.room = self.room.w_to
+            if hasattr('self.room', 'w_to'):
+                self.room = self.room.w_to
+            else:
+                print('=====Woops, you can\'t go that way=====')
         if direction == 'e':
-            self.room = self.room.e_to
+            if hasattr(self.room, 'e_to'):
+                self.room = self.room.e_to
+            else:
+                print('=====Woops, you can\'t go that way=====')
