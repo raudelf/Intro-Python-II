@@ -40,9 +40,8 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 
-new_player = Player(room['outside'])
+player = Player(room['outside'])
 
-print(new_player)
 
 # Write a loop that:
 #
@@ -54,3 +53,20 @@ print(new_player)
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+while True:
+    print("""===========Welcome to the Classic Adventure Game===========""")
+    print("You are currently here:")
+    print(player)
+
+    direction = input(
+        'Where would you like to go?\n[n] North\t[s] South\t[w] West\t[e] East\t[q] Quit Game:\n')
+    if direction in {'n', 's', 'w', 'e'}:
+        player.new_direction(direction)
+        if(player)
+        print(player)
+    elif direction == 'q':
+        exit('Thank you for playing')
+    else:
+        print('Invalid Command')
+        print(player)
