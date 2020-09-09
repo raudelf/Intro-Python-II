@@ -54,17 +54,16 @@ player = Player(room['outside'])
 #
 # If the user enters "q", quit the game.
 
-while True:
-    print("""===========Welcome to the Classic Adventure Game===========""")
-    print("You are currently here:")
-    print(player)
+print("""===========Welcome to the Classic Adventure Game===========""")
+print("You are currently here:")
 
+while True:
+    print(player)
+    print("========================")
     direction = input(
         'Where would you like to go?\n[n] North\t[s] South\t[w] West\t[e] East\t[q] Quit Game:\n')
     if direction in {'n', 's', 'w', 'e'}:
         player.new_direction(direction)
-        if(player)
-        print(player)
     elif direction == 'q':
         exit('Thank you for playing')
     else:
