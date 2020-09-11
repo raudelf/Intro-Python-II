@@ -6,15 +6,26 @@ class Player:
         self.inventory = inventory
 
     def __str__(self):
-        if len(self.room.room_items) < 1:
-            return f"""Room: {self.room.room_name}\nDescription: {self.room.desc}
+        return f"Room: {self.room.room_name}\nDescription: {self.room.desc}"
 
-            There are no items in here."""
+    def check_inventory(self):
+        if self.inventory:
+            print('=======Inventory=======')
+            for i in range(len(self.inventory)):
+                print(self.inventory[i].item_name)
         else:
+            print('=======Inventory=======')
+            print('You currently have no items')
+
+    def search_room(self):
+        if self.room.room_items:
+            print('=======Room Items=======')
             for i in range(len(self.room.room_items)):
-                return f"""Room: {self.room.room_name}\nDescription: {self.room.desc}
-                Room Items:
-                {self.room.room_items[i].item_name}\t{self.room.room_items[i].description}"""
+                print(self.room.room_items[i].item_name, '\t',
+                      self.room.room_items[i].description)
+        else:
+            print('=======Room Items=======')
+            print('There are no items in here.')
 
     def new_direction(self, direction):
         if direction == 'n':
